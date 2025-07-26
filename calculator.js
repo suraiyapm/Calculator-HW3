@@ -12,13 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const value = target.textContent;
 
-        if (value === 'Clear') {
+        if (value === 'C') {
             currentInput = '';
         } else if (value === '=') {
             try {
                 currentInput = eval(currentInput).toString();
             } catch (error) {
                 currentInput = 'Nope!';
+            }
+        } else if (ops.includes(value)) {
+            const lastChar = currentInput.slice(-1);
+            if (ops.includes(lastChar)) {
+                currentInput = currentInput.slice(0, -1) + value;
+            } else {
+                currentInput += value;
             }
         } else {
             currentInput += value;
