@@ -11,6 +11,7 @@ body {
 
 #calcumalator {
     background:#58f7ff;
+    background-image:radial-gradient(#58f7ff, #0950adaa);
     padding:1.2rem;
     border-radius:1.2rem;
     box-shadow: 0 .8rem 1rem rgba(4, 1, 10, 0.2);
@@ -35,6 +36,8 @@ body {
 button {
     padding:1rem;
     font-size:1.2rem;
+    font-weight: bold;
+    color:rgb(6, 4, 23);
     border: 2px solid #7295e1;
     border-radius:.8rem;
     background:#83fffd;
@@ -44,4 +47,27 @@ button {
 
 button:hover {
     background:#96b7fd;
+}
+
+.button-grid {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0.6rem;
+}
+
+button.op {
+    background:hsl(256, 100%, 78%);
+}
+button.op:hover {
+    background:#5a80d1;
+}
+
+button.c-button {
+    grid-column:span 4;
+    background:#3fffdf;
+}
+
+#buttons {
+    display:flex;
+    justify-content:center;
 }
